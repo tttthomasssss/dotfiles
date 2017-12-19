@@ -1,0 +1,20 @@
+# virtualenv stuff
+export WORKON_HOME=$HOME/.virtualenvs
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+# Custom variables
+#export INFINITY=/media/data4/_datasets/
+export INFINITY=/media/data4
+export DATA=/mnt/data0/thk22/_datasets/
+export BKP_DATASETS=/mnt/data3/thk22/_datasets/
+export BASE_DATA=/mnt/data1/thk22/_datasets/
+export CODE=$HOME/code
+export LOGS=$HOME/logs
+export RESULTS=$HOME/_results
+
+# Aliases
+alias workon_nlpy3="cd $CODE && workon nlpy3"
+alias rsync="rsync -v -h --progress"
+alias vi="vim"
+alias gz="gzip"
+alias rc="ls -lAh | wc -l"

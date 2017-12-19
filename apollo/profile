@@ -1,0 +1,47 @@
+# Variables
+export LUSTRE_HOME=/lustre/scratch/inf/thk22
+
+# load python 2.7.5
+# module load python/2.7.5
+# load python 3.4.3
+module load python/3.4.3
+#export PYTHONPATH=~/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=$LUSTRE_HOME/code:$PYTHONPATH
+export PYTHONPATH=$LUSTRE_HOME/code/ssl-naive-bayes:$PYTHONPATH
+#export PYTHONPATH=~/.local/lib/python2.7/site-packages:$PYTHONPATH
+
+# load virtualenvwrapper
+#/cm/shared/apps/python/2.7.5/bin/virtualenvwrapper.sh
+#/cm/shared/apps/python/2.7.10/bin/virtualenvwrapper.sh
+source /cm/shared/apps/python/3.4.3/bin/virtualenvwrapper.sh
+
+# Java 8
+export JAVA_HOME=$HOME/bin/jdk1.8.0_60
+
+# Path
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Variables
+DATASETS="$LUSTRE_HOME/_datasets"
+EXT_DATASETS="$LUSTRE_HOME/_datasets/CACHE"
+INFINITE_TAGLAB="$LUSTRE_HOME/code"
+CODE=$INFINITE_TAGLAB
+RESULTS="$LUSTRE_HOME/_results"
+LOGS="$LUSTRE_HOME/_logs"
+DATA=$DATASETS
+
+module load sge
+module add openmpi
+module add hdf5
+#module add matlab
+
+# For installing pytables, the CC flag needs to be set to a mpi compatible compiler
+# e.g.: export CC=/cm/shared/apps/mpich/ge/gcc/64/3.0.4/bin/mpicc
+
+# Aliases
+alias qs='qstat -u thk22'
+alias num_jobs="qs | grep thk22 | wc | awk '{print \$1}'"
+alias cownt_jobs="num_jobs | xargs python /lustre/scratch/inf/thk22/code/cowsay-py/cowsay.py"
+alias cd_lustre="cd $LUSTRE_HOME"
+alias interactive_q="qlogin -q interactive.q"
+alias ssh_disco="ssh thk22@disco.inf.susx.ac.uk"
