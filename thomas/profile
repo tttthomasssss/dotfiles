@@ -1,0 +1,123 @@
+# Homebrew
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# MacPorts Installer addition on 2011-04-02_at_18:47:44: adding an appropriate PATH variable for use with MacPorts.
+#export PATH=/Users/thomas/DevSandbox/TheUniSandbox/FinalYearProject/other/libraries/play-1.1/play:/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# Play Framework
+export PATH=/Users/thomas/DevSandbox/TheUniSandbox/FinalYearProject/other/libraries/play-1.1/play:$PATH
+
+# PyCharm
+PYDEVD_USE_CYTHON=NO
+
+# DyNet
+export DYLD_LIBRARY_PATH=/Users/thomas/DevSandbox/InfiniteSandbox/tag-lab/_libs/dynet-base/dynet/build/dynet/:$DYLD_LIBRARY_PATH
+
+# virtualenv stuff
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/DevSandbox/TheSandbox/Projects/Bionapse
+#source /usr/local/bin/virtualenvwrapper.sh
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+alias touch_nvm="source /usr/local/opt/nvm/nvm.sh"
+
+# Teebly pdf blocker
+alias run_pdf_blocker="java -jar pdf_blocker-1.0.0.jar"
+
+# Venv Environment
+alias workon_nlp="source $HOME/.virtualenvs/nlp/bin/activate"
+alias workon_teebly="source $HOME/.virtualenvs/teebly/bin/activate"
+
+# LaTex commandline stuff
+export PATH=$PATH:/usr/texbin
+export BIBINPUTS=$BIBINPUTS:/$HOME/DevSandbox/InfiniteSandbox/tag-lab/moab/
+
+# Julia stuff
+#export PATH=$PATH:/Applications/Julia-0.2.0.app/Contents/Resources/julia/bin
+
+# Local Scripts
+export PATH=$PATH:$HOME/.scripts
+
+# Locales for iPython Notebook, see: http://stackoverflow.com/questions/15526996/ipython-notebook-locale-error
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add Go to PATH
+export GOPATH="/usr/local/Cellar/go"
+export PATH="$PATH:$GOPATH/1.2.2/bin"
+
+# DocBook XML
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+# Postgres
+#export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/MacOS:$PATH"
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="${JAVA_HOME}/bin:$PATH"
+
+# CRF++
+#export CRFPP_PATH="/usr/local/Cellar/crf++/0.58"
+export CRFPP_PATH="/usr/local/bin"
+
+# Maven
+export PATH="/usr/local/apache-maven-3.2.5/bin:$PATH"
+
+# HDF5
+#export HDF5_DIR="/usr/local/Cellar/hdf5"
+
+# PYTHONPATH
+#export PYTHONPATH="/Users/thomas/DevSandbox/EpicDataShelf/tag-lab/Consolist:$PYTHONPATH"
+#export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+#export PYTHONPATH="/usr/local/lib/python3.4/site-packages:$PYTHONPATH"
+# Global Vars
+export INFINITY="/Users/thomas/DevSandbox/InfiniteSandbox"
+export INFINITE_TAGLAB="/Users/thomas/DevSandbox/InfiniteSandbox/tag-lab"
+export CODE=$INFINITE_TAGLAB
+export INFINITE_PAPRR="/Users/thomas/DevSandbox/InfiniteSandbox/paprr"
+export DATASETS=$HOME/DevSandbox/EpicDataShelf/tag-lab
+export RESULTS=$HOME/DevSandbox/InfiniteSandbox/tag-lab/_results
+export DATA=$DATASETS
+export LOGS="$HOME/DevSandbox/InfiniteSandbox/tag-lab/_logs"
+export PAPERS="$HOME/DevSandbox/InfiniteSandbox/papers"
+
+# Caevo
+export JWNL="/Users/thomas/wordnet3.1/jwnl_file_properties.xml"
+
+# Stack Path
+export PATH="/Users/thomas/.local/bin:$PATH"
+
+# Aliases
+alias start_elasticsearch="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+alias start_mongodb="mongod --config /usr/local/etc/mongod.conf"
+alias workon_paprr="cd $INFINITE_PAPRR && workon paprr"
+alias taglab_ssh_tunnel="ssh -N -L 3307:127.0.0.1:3306 thk22@tag-dev.inf.susx.ac.uk"
+alias workon_nlpy3="cd $INFINITE_TAGLAB && workon nlpy3"
+alias md="open -a /Applications/MultiMarkdown Composer.app"
+alias pdf="open -a /Applications/Preview.app"
+alias finder="open -a /System/Library/CoreServices/Finder.app"
+alias preview="open -a /Applications/Preview.app"
+alias rsync="rsync -v -h --progress"
+alias method51_ssh="ssh -N -L 3307:127.0.0.1:3306 thk22@tag-dev.inf.susx.ac.uk"
+alias ssh_paprr_prod="ssh thomas@178.62.85.249"
+alias ssh_apollo="ssh thk22@apollo.hpc.susx.ac.uk"
+alias ssh_lab="ssh thk22@m011437.inf.susx.ac.uk"
+alias ssh_disco="ssh thk22@disco.inf.susx.ac.uk"
+alias ssh_aws="ssh ubuntu@ec2-52-209-136-3.eu-west-1.compute.amazonaws.com"
+alias ssh_ed="ssh tkober@staff.ssh.inf.ed.ac.uk"
+alias ssh_darkstar="ssh tkober@darkstar.inf.ed.ac.uk"
+alias ssh_catzilla="ssh tkober@catzilla.inf.ed.ac.uk"
+alias ssh_zutism="ssh tkober@zutism.inf.ed.ac.uk"
+alias ssh_pataphysique="ssh tkober@pataphysique.inf.ed.ac.uk"
+alias symlink="ln -s"
+alias tex="open -a /Applications/TeXShop.app/Contents/MacOS/TeXShop"
+alias bib="open -a /Applications/TeX/BibDesk.app"
+alias matlab="/Applications/MATLAB_R2016a.app/bin/matlab -nodesktop -nosplash -nodisplay"
+alias load_bonjour="sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist"
+alias unload_bonjour="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist && sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist"
