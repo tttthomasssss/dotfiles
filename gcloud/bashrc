@@ -125,6 +125,7 @@ export DATA="/home/t_kober/data"
 export LOGS="/home/t_kober/logs"
 export RESEARCH="/home/t_kober"
 export EXPERIMENTS="/home/t_kober/experiments"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # Setting PATH for Python 3.7
 # The original version is saved in .zprofile.pysave
